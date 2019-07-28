@@ -95,7 +95,7 @@ describe('When not logged in', async () => {
         expect(result).toEqual({error: 'You must log in!'});
     });
 
-    test.only('actions related to blog are prohibited', async () => {
+    test('actions related to blog are prohibited', async () => {
         const results = await page.execRequests(actions);
 
         for(result of results) {
